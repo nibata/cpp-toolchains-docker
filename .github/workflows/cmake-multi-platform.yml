@@ -75,7 +75,7 @@ jobs:
       run: cmake --install build --config ${{ matrix.build_type }} --prefix instdir --strip
 
     - name: asd
-      run: ls
+      run: cd build && ls
     
     - name: Pack
       working-directory: instdir
