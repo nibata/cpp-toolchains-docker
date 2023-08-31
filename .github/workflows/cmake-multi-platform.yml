@@ -76,7 +76,7 @@ jobs:
       
 
     - name: Pack
-      run: tar cfv ./${{ matrix.config.artifact }} --format=7zip .
+      run: tar cfv ../${{ matrix.config.artifact }}  ./build
 
 
     - name: Upload
