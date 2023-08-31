@@ -76,12 +76,12 @@ jobs:
       
 
     - name: Pack
-      run: tar cf ./${{ matrix.config.artifact }}  .
+      run: tar cf ./${{ matrix.artifact }}  .
 
 
     - name: Upload
       uses: actions/upload-artifact@v3
       with:
-        path: ./${{ matrix.config.artifact }}
-        name: ${{ matrix.config.artifact }}
+        path: ./${{ matrix.artifact }}
+        name: ${{ matrix.artifact }}
 
