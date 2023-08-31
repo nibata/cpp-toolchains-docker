@@ -75,7 +75,6 @@ jobs:
       run: cmake --build ${{ steps.strings.outputs.build-output-dir }} --config ${{ matrix.build_type }}
 
     - name: Pack
-      working-directory: instdir
       run: cmake -E tar cfv ../${{ matrix.config.artifact }} --format=7zip .
 
 
