@@ -76,7 +76,7 @@ jobs:
       
 
     - name: Pack
-      run: tar cf ../${{ matrix.config.artifact }}  .
+      run: tar cf ./${{ matrix.config.artifact }}  .
 
 
     - name: Upload
