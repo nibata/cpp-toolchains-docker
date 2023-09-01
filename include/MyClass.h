@@ -13,8 +13,8 @@ class MyClass {
     std::string name;
 
 public:
-    MyClass(int id, std::string name);
-    int get_id() const;
+    MyClass(int id, const std::string &name);
+    int get_id();
     std::string  get_name();
 
 };

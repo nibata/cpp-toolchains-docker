@@ -6,15 +6,15 @@
 
 #include "../include/MyClass.h"
 
-MyClass::MyClass(int id, std::string name) {
+MyClass::MyClass(int id, const std::string &name) {
     this->id = id;
     this->name = name;
 }
 
-int MyClass::get_id() const {
+int MyClass::get_id(){
     return this->id;
 }
 
-std::string MyClass::get_name() {
+std::string MyClass::get_name(){
     return this->name;
 }
