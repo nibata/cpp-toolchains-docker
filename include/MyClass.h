@@ -14,7 +14,7 @@ class MyClass {
 
 public:
     MyClass(int id, const std::string &name);
-    int get_id();
+    [[nodiscard]] int get_id() const;
     std::string  get_name();
 
 };

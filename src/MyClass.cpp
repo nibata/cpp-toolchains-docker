@@ -11,7 +11,7 @@ MyClass::MyClass(int id, const std::string &name) {
     this->name = name;
 }
 
-int MyClass::get_id(){
+int MyClass::get_id() const{
     return this->id;
 }
 
