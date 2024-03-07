@@ -29,19 +29,19 @@ jobs:
         include:
           - name: "Windows"
             artifact: "Windows.7z"
-            compiled_name: "test.exe"
+            file_path_from_build: "Release/test.exe"
             os: windows-latest
             c_compiler: cl
             cpp_compiler: cl
           - name: "Ubuntu-GCC"
             artifact: "Ubuntu-GCC.7z"
-            compiled_name: "test"
+            file_path_from_build: "test"
             os: ubuntu-latest
             c_compiler: gcc
             cpp_compiler: g++
           - name: "Ubuntu-GCC"
             artifact: "Ubuntu-GCC.7z"
-            compiled_name: "test"
+            file_path_from_build: "test"
             os: ubuntu-latest
             c_compiler: clang
             cpp_compiler: clang++
@@ -78,7 +78,7 @@ jobs:
       run: cmake --build ${{ steps.strings.outputs.build-output-dir }} --config ${{ matrix.build_type }}
 
     - name: Pack
-      run: tar cf ./${{ matrix.artifact }}  ./build/${{ matrix.compiled_name }}
+      run: tar cf ./${{ matrix.artifact }}  ./build/${{ matrix.file_path_from_build }}
 
 
     - name: Upload
